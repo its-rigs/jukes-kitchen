@@ -1,0 +1,36 @@
+containers:
+  node-env:
+    image: node:14.7.0
+    volumes:
+      - local: <{batect.project_directory}
+        container: /code
+        options: cached
+      - type: cache
+        name: node_modules
+        container: /code/node_modules
+    working_directory: /code
+    enable_init_process: true
+    run_as_current_user:
+      enabled: true
+      home_directory: /home/container-user
+    ports:
+      - 4000:8000
+
+tasks:
+  shell:
+    description: Shell into node environment
+    run:
+      container: node-env
+      command: bash
+
+  install:
+    description: Install dependencies
+    run:
+      container: node-env
+      command: npm install
+
+  develop:
+    description: Run Gatsby in develop mode
+    run:
+      container: node-env
+      command: npm run develop
