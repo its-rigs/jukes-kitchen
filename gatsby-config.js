@@ -12,7 +12,7 @@ module.exports = {
       options: {
         name: `Juke's Kitchen`,
         short_name: `Juke's Kitchen`,
-        start_url: `https://its-rigs.github.io/jukes-kitchen`,
+        start_url: `/`,
         background_color: `#294C89`,
         theme_color: `#294C89`,
         display: `standalone`,
@@ -20,7 +20,6 @@ module.exports = {
         icon_options: {
           purpose: `any maskable`,
         },
-        legacy: false,
       },
     },
     `gatsby-plugin-offline`
