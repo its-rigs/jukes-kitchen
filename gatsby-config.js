@@ -12,7 +12,7 @@ module.exports = {
       options: {
         name: `Juke's Kitchen`,
         short_name: `Juke's Kitchen`,
-        start_url: `https://its-rigs.github.io/recipease`,
+        start_url: `https://its-rigs.github.io/jukes-kitchen`,
         background_color: `#294C89`,
         theme_color: `#294C89`,
         display: `standalone`,
@@ -25,5 +25,5 @@ module.exports = {
     },
     `gatsby-plugin-offline`
   ],
-  pathPrefix: "/recipease",
+  pathPrefix: "/jukes-kitchen",
 }
