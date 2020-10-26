@@ -34,3 +34,21 @@ tasks:
     run:
       container: node-env
       command: npm run develop
+
+  clean:
+    description: Clean up all Gatsby artifacts
+    run:
+      container: node-env
+      command: npm run clean
+
+  format:
+    description: Run prettier and format the codebase
+    run:
+      container: node-env
+      command: npm run format
+
+  build:
+    description: Build production site
+    run:
+      container: node-env
+      command: npm run build
