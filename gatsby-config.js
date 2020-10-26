@@ -12,15 +12,15 @@ module.exports = {
       options: {
         name: `Juke's Kitchen`,
         short_name: `Juke's Kitchen`,
-        start_url: `/`,
-        background_color: `#FFF`,
+        start_url: `https://its-rigs.github.io/recipease`,
+        background_color: `#294C89`,
         theme_color: `#294C89`,
         display: `standalone`,
         icon: `assets/icon.png`,
         icon_options: {
           purpose: `any maskable`,
         },
-        legacy: false
+        legacy: false,
       },
     },
     `gatsby-plugin-offline`
