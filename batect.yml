@@ -52,3 +52,11 @@ tasks:
     run:
       container: node-env
       command: npm run build
+
+  publish:
+    description: Push to github pages
+    run:
+      container: node-env
+      command: ./scripts/publish.sh
+      environment:
+        GH_TOKEN: ${GH_TOKEN}
