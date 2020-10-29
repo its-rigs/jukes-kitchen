@@ -1,0 +1,73 @@
+/* Base Styles
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* NOTE
+html is set to 62.5% so that all the REM are based on 10px sizing.
+So basically1.5rem = 15px :) */
+html {
+  font-size: 62.5%; }
+
+body {
+  font-size: 1.5em; /* currently ems cause chrome bug misinterpreting rems on body element */
+  line-height: 1.6;
+  font-weight: 400;
+  font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #222; }
+
+main {
+  padding-top: 80px;
+}
+
+/* Lists
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+ul {
+  list-style: circle inside; }
+ol {
+  list-style: decimal inside; }
+ol, ul {
+  padding-left: 0;
+  margin-top: 0; }
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+  margin: 1.5rem 0 1.5rem 3rem;
+  font-size: 90%; }
+li {
+  margin-bottom: 1rem; }
+
+/* Typography
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+h1, h2 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-weight: 300; }
+
+h1 { font-size: 3.0rem; line-height: 1.1;}
+h2 { font-size: 2.6rem; line-height: 1.15;}
+
+/* Larger than phablet */
+@media (min-width: 550px) {
+  h1 { font-size: 4.0rem; }
+  h2 { font-size: 3.6rem; }
+}
+
+p {
+  margin-top: 0; }
+
+
+/* Spacing
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+p,
+ul,
+ol {
+  margin-bottom: 2.5rem; }
+
+
+/* Misc
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+hr {
+  margin-top: 3rem;
+  margin-bottom: 3.5rem;
+  border-width: 0;
+  border-top: 1px solid #E1E1E1; }
+

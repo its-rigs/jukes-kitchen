@@ -1,13 +1,15 @@
-/**
- * Configure your Gatsby site with this file.
- *
- * See: https://www.gatsbyjs.com/docs/gatsby-config/
- */
-
 module.exports = {
-  /* Your site config here */
   plugins: [
     `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `Raleway\:300,400,600`,
+        ],
+        display: 'swap'
+      }
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
