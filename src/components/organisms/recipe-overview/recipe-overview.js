@@ -1,9 +1,15 @@
-import React from "react";
+import React from 'react'
 
-import { OneThirdColumn, TwoThirdsColumn, Image } from "../../atoms"
-import { RecipeSection, RecipeInfo } from "../../molecules";
+import { OneThirdColumn, TwoThirdsColumn, Image } from '../../atoms'
+import { RecipeSection, RecipeInfo } from '../../molecules'
 
-export const RecipeOverview = ({ title, image, servings, prepTime, cookTime }) => {
+export const RecipeOverview = ({
+  title,
+  image,
+  servings,
+  prepTime,
+  cookTime,
+}) => {
   return (
     <RecipeSection sectionId="overview">
       <OneThirdColumn>
@@ -12,8 +18,12 @@ export const RecipeOverview = ({ title, image, servings, prepTime, cookTime }) =
 
       <TwoThirdsColumn>
         <h1>{title}</h1>
-        <RecipeInfo servings={servings} prepTime={prepTime} cookTime={cookTime} />
+        <RecipeInfo
+          servings={servings}
+          prepTime={prepTime}
+          cookTime={cookTime}
+        />
       </TwoThirdsColumn>
     </RecipeSection>
-  );
+  )
 }

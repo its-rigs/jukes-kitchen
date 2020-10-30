@@ -1,14 +1,16 @@
 module.exports = {
+  siteMetadata: {
+    title: `Juke's Kitchen`,
+    description: `Some recipes we like to cook`,
+  },
   plugins: [
     `gatsby-plugin-sass`,
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [
-          `Raleway\:300,400,600`,
-        ],
-        display: 'swap'
-      }
+        fonts: [`Raleway\:300,400,600`],
+        display: 'swap',
+      },
     },
     {
       resolve: `gatsby-plugin-manifest`,
@@ -25,7 +27,7 @@ module.exports = {
         },
       },
     },
-    `gatsby-plugin-offline`
+    `gatsby-plugin-offline`,
   ],
-  pathPrefix: "/jukes-kitchen",
+  pathPrefix: '/jukes-kitchen',
 }

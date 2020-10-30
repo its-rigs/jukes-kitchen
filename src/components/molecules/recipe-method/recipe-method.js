@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react'
 
-import { TwoThirdsColumn } from "../../atoms"
+import { TwoThirdsColumn } from '../../atoms'
 
 export const RecipeMethod = ({ children }) => {
   return (
@@ -8,5 +8,5 @@ export const RecipeMethod = ({ children }) => {
       <h2>Method</h2>
       {children}
     </TwoThirdsColumn>
-  );
+  )
 }

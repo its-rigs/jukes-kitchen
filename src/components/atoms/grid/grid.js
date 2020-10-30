@@ -1,29 +1,19 @@
-import React from "react";
+import React from 'react'
 
-import styles from './grid.module.scss';
+import styles from './grid.module.scss'
 
 export const Container = ({ children }) => {
-  return (
-    <div className={styles.container}>
-      {children}
-    </div>
-  );
+  return <div className={styles.container}>{children}</div>
 }
 
 export const Row = ({ children }) => {
-  return (
-    <div className={styles.row}>
-      {children}
-    </div>
-  );
+  return <div className={styles.row}>{children}</div>
 }
 
 export const OneThirdColumn = ({ children }) => {
   return (
-    <div className={[styles.oneThird, styles.column].join(' ')}>
-      {children}
-    </div>
-  );
+    <div className={[styles.oneThird, styles.column].join(' ')}>{children}</div>
+  )
 }
 
 export const TwoThirdsColumn = ({ children }) => {
@@ -31,5 +21,5 @@ export const TwoThirdsColumn = ({ children }) => {
     <div className={[styles.twoThirds, styles.column].join(' ')}>
       {children}
     </div>
-  );
+  )
 }

@@ -1,7 +1,7 @@
-import React from "react"
+import React from 'react'
 
-import { Link } from '../../atoms';
-import './navbar.module.scss';
+import { Link } from '../../atoms'
+import './navbar.module.scss'
 
 export function Navbar() {
   return (
@@ -9,6 +9,6 @@ export function Navbar() {
       <Link to="/" name="Home" />
       <Link to="/categories" name="Categories" />
       <Link to="/tags" name="Tags" />
-    </nav >
-  );
+    </nav>
+  )
 }

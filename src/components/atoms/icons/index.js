@@ -1,3 +1,3 @@
-export { CookTimeIcon } from './cook';
-export { PrepTimeIcon } from './prep';
-export { QuantityIcon } from './quantity';
+export { CookTimeIcon } from './cook'
+export { PrepTimeIcon } from './prep'
+export { QuantityIcon } from './quantity'
