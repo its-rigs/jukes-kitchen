@@ -13,15 +13,26 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `recipes`,
+        path: `${__dirname}/content/recipes/`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {},
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Juke's Kitchen`,
         short_name: `Juke's Kitchen`,
         start_url: `/`,
-        background_color: `#294C89`,
-        theme_color: `#294C89`,
+        background_color: `#3a76df`,
+        theme_color: `#3a76df`,
         display: `standalone`,
-        icon: `assets/icon.png`,
+        icon: `${__dirname}/content/assets/icon.png`,
         icon_options: {
           purpose: `any maskable`,
         },
