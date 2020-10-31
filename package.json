@@ -9,11 +9,15 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
+    "@mdx-js/mdx": "^1.6.19",
+    "@mdx-js/react": "^1.6.19",
     "gatsby": "^2.24.85",
     "gatsby-plugin-google-fonts": "^1.0.1",
     "gatsby-plugin-manifest": "^2.4.35",
+    "gatsby-plugin-mdx": "^1.2.52",
     "gatsby-plugin-offline": "^3.2.37",
     "gatsby-plugin-sass": "^2.3.21",
+    "gatsby-source-filesystem": "^2.3.37",
     "node-sass": "^4.14.1",
     "normalize.css": "^8.0.1",
     "react": "^16.12.0",
