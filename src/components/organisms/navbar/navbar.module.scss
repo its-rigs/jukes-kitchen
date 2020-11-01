@@ -5,4 +5,20 @@ nav {
 	justify-content: center;
 	background: rgba(255, 255, 255, .9);
 	z-index: 999;
+	
+	a {
+		display: inline-block;
+		text-decoration: none;
+		padding: 20px 15px;
+		color: #444;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		font-size: .9em;
+	}
+	
+	a {
+		color: #444; }
+	
+	a:hover {
+		color: #0FA0CE; }
 }

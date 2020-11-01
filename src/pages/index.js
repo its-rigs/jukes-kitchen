@@ -1,20 +1,23 @@
-import React from "react"
-import { graphql } from "gatsby"
-import { Link } from '../components/atoms'
+import React from 'react'
+import { graphql } from 'gatsby'
+import { Container } from '../components/atoms'
 import { Layout } from '../components/organisms'
+import { Link } from 'gatsby'
 
 const BlogIndex = ({ data }) => {
   const { edges: posts } = data.allMdx
 
   return (
     <Layout>
-      <ul>
-        {posts.map(({ node: post }) => (
-          <li key={post.id}>
-            <Link to={post.frontmatter.slug} name={post.frontmatter.title} />
-          </li>
-        ))}
-      </ul>
+      <Container>
+        <ul>
+          {posts.map(({ node: post }) => (
+            <li key={post.id}>
+              <Link to={post.frontmatter.slug}>{post.frontmatter.title}</Link>
+            </li>
+          ))}
+        </ul>
+      </Container>
     </Layout>
   )
 }

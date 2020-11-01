@@ -1,14 +1,14 @@
 import React from 'react'
 
-import { Link } from '../../atoms'
+import { Link } from 'gatsby'
 import './navbar.module.scss'
 
 export function Navbar() {
   return (
     <nav>
-      <Link to="/" name="Home" />
-      <Link to="/categories" name="Categories" />
-      <Link to="/tags" name="Tags" />
+      <Link to="/">Home</Link>
+      <Link to="/categories">Categories</Link>
+      <Link to="/tags">Tags</Link>
     </nav>
   )
 }

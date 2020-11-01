@@ -1,35 +1,31 @@
 import React from 'react'
 
-import {
-  RecipeIngredients,
-  RecipeMethod,
-  RecipeSection,
-} from '../molecules'
+import { RecipeIngredients, RecipeMethod, RecipeSection } from '../molecules'
 import { Layout, RecipeOverview } from '../organisms'
-import { MDXProvider } from "@mdx-js/react"
-import { MDXRenderer } from "gatsby-plugin-mdx"
-import { graphql } from 'gatsby';
+import { MDXProvider } from '@mdx-js/react'
+import { MDXRenderer } from 'gatsby-plugin-mdx'
+import { graphql } from 'gatsby'
 
 const shortcodes = { RecipeIngredients, RecipeMethod }
 
 export default function RecipeTemplate({ data: { mdx } }) {
-  const { frontmatter: overview } = mdx;
+  const { frontmatter: overview } = mdx
   return (
-    <Layout>
-      <RecipeOverview
-        title={overview.title}
-        servings={overview.servings}
-        prepTime={overview.prepTime}
-        cookTime={overview.cookTime}
-        image={overview.image.publicURL}
-      />
+    <MDXProvider components={shortcodes}>
+      <Layout>
+        <RecipeOverview
+          title={overview.title}
+          servings={overview.servings}
+          prepTime={overview.prepTime}
+          cookTime={overview.cookTime}
+          image={overview.image.publicURL}
+        />
 
-      <RecipeSection sectionId="recipe">
-        <MDXProvider components={shortcodes}>
+        <RecipeSection sectionId="recipe">
           <MDXRenderer>{mdx.body}</MDXRenderer>
-        </MDXProvider>
-      </RecipeSection>
-    </Layout>
+        </RecipeSection>
+      </Layout>
+    </MDXProvider>
   )
 }
 
@@ -43,7 +39,7 @@ export const pageQuery = graphql`
         cookTime
         prepTime
         servings
-        image{
+        image {
           publicURL
         }
       }
