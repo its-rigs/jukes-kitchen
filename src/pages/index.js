@@ -1,29 +1,30 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import { Container } from '../components/atoms'
+import { Container, OneThirdColumn } from '../components/atoms'
+import { RecipeTile } from '../components/molecules'
 import { Layout } from '../components/organisms'
-import { Link } from 'gatsby'
 
-const BlogIndex = ({ data }) => {
+const Index = ({ data }) => {
   const { edges: posts } = data.allMdx
 
   return (
     <Layout>
       <Container>
-        <ul>
-          {posts.map(({ node: post }) => (
-            <li key={post.id}>
-              <Link to={post.frontmatter.slug}>{post.frontmatter.title}</Link>
-            </li>
-          ))}
-        </ul>
+        {posts.map(({ node: post }) => {
+          const { frontmatter } = post;
+          return (
+            <OneThirdColumn>
+              <RecipeTile key={post.id} slug={frontmatter.slug} imageUrl={frontmatter.image.publicURL} title={frontmatter.title} />
+            </OneThirdColumn>
+          )
+        })}
       </Container>
     </Layout>
   )
 }
 
 export const pageQuery = graphql`
-  query blogIndex {
+  query indexQuery {
     allMdx {
       edges {
         node {
@@ -31,6 +32,9 @@ export const pageQuery = graphql`
           frontmatter {
             title
             slug
+            image {
+              publicURL
+            }
           }
         }
       }
@@ -38,4 +42,4 @@ export const pageQuery = graphql`
   }
 `
 
-export default BlogIndex
+export default Index
