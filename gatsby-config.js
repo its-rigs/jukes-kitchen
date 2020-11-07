@@ -2,6 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Juke's Kitchen`,
     description: `Some recipes we like to cook`,
+    author: 'Juke'
   },
   plugins: [
     `gatsby-plugin-sass`,
