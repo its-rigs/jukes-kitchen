@@ -7,13 +7,13 @@ import styles from './recipe-tile.module.scss'
 
 export const RecipeTile = ({ slug, imageUrl, title }) => {
   return (
-    <div className={styles.recipeTile}>
-      <Link to={slug}>
+    <Link to={slug}>
+      <div className={styles.recipeTile}>
         <div className={styles.content}>
           {title}
         </div>
         <ImageTile src={imageUrl} />
-      </Link>
-    </div>
+      </div>
+    </Link>
   )
 }
