@@ -26,6 +26,6 @@ jobs:
         run: ./batect build
 
       - name: Publish to github pages
-        run: ./batect Publish
+        run: ./batect publish
         env:
           GH_TOKEN: ${{ secrets.PUBLISH_TOKEN }}
