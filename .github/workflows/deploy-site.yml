@@ -1,0 +1,31 @@
+name: Deploy Juke's Kitchen
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  build:
+    runs-on: ubuntu-18.04
+    env:
+      BATECT_CACHE_TYPE: directory
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Cache dependencies
+        uses: actions/cache@v1
+        with:
+          path: .batect/caches
+          key: batect-caches-${{ hashFiles('package-lock.json') }}
+
+      - name: Install dependencies
+        run: ./batect install
+
+      - name: Build application
+        run: ./batect build
+
+      - name: Publish to github pages
+        run: ./batect Publish
+        env:
+          GH_TOKEN: ${{ secrets.PUBLISH_TOKEN }}
