@@ -35,7 +35,6 @@ const Categories = ({ data }) => {
   });
 
   const orderedCategories = Array.from(categoriesSet).sort();
-  console.warn(recipeMap)
 
   return (
     <Layout>

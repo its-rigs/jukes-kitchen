@@ -9,8 +9,10 @@ export const RecipeTile = ({ slug, imageUrl, title }) => {
   return (
     <div className={styles.recipeTile}>
       <Link to={slug}>
+        <div className={styles.content}>
+          {title}
+        </div>
         <ImageTile src={imageUrl} />
-        {title}
       </Link>
     </div>
   )
