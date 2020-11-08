@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[8],{RXBc:function(e,n,a){"use strict";a.r(n),a.d(n,"pageQuery",(function(){return l}));var t=a("q1tI"),r=a.n(t),c=a("kbOB"),u=a("41Hj"),l="2640893453";n.default=function(e){var n=e.data.allMdx.edges;return r.a.createElement(u.a,null,r.a.createElement(c.a,null,r.a.createElement(u.b,{recipes:n})))}}}]);
+//# sourceMappingURL=component---src-pages-index-js-09a84f19ea8b7d89302d.js.map

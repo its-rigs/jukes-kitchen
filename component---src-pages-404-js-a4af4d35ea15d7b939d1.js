@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[6],{w2l6:function(e,n,t){"use strict";t.r(n);var l=t("q1tI"),a=t.n(l),o=t("kbOB"),r=t("41Hj");n.default=function(){return a.a.createElement(r.a,null,a.a.createElement(o.a,null,a.a.createElement("h1",null,"Oops! Could't find recipe!"),a.a.createElement("p",null,"Seems we've lost a bit of information. Hopefully it'll turn up soon. Try checking back later.")))}}}]);
+//# sourceMappingURL=component---src-pages-404-js-a4af4d35ea15d7b939d1.js.map
