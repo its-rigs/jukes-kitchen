@@ -1,15 +1,15 @@
-import React from 'react'
+import React from 'react';
 
-import { RecipeIngredients, RecipeMethod, RecipeSection } from '../molecules'
-import { Layout, RecipeOverview } from '../organisms'
-import { MDXProvider } from '@mdx-js/react'
-import { MDXRenderer } from 'gatsby-plugin-mdx'
-import { graphql } from 'gatsby'
+import { RecipeIngredients, RecipeMethod, RecipeSection } from '../molecules';
+import { Layout, RecipeOverview } from '../organisms';
+import { MDXProvider } from '@mdx-js/react';
+import { MDXRenderer } from 'gatsby-plugin-mdx';
+import { graphql } from 'gatsby';
 
-const shortcodes = { RecipeIngredients, RecipeMethod }
+const shortcodes = { RecipeIngredients, RecipeMethod };
 
 export default function RecipeTemplate({ data: { mdx } }) {
-  const { frontmatter: overview } = mdx
+  const { frontmatter: overview } = mdx;
   return (
     <MDXProvider components={shortcodes}>
       <Layout>
@@ -26,7 +26,7 @@ export default function RecipeTemplate({ data: { mdx } }) {
         </RecipeSection>
       </Layout>
     </MDXProvider>
-  )
+  );
 }
 
 export const pageQuery = graphql`
@@ -45,4 +45,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

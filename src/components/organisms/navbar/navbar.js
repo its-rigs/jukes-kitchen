@@ -1,7 +1,7 @@
-import React from 'react'
+import React from 'react';
 
-import { Link } from 'gatsby'
-import './navbar.module.scss'
+import { Link } from 'gatsby';
+import './navbar.module.scss';
 
 export function Navbar() {
   return (
@@ -10,5 +10,5 @@ export function Navbar() {
       <Link to="/categories">Categories</Link>
       <Link to="/tags">Tags</Link>
     </nav>
-  )
+  );
 }

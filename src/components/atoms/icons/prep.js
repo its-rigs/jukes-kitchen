@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 export const PrepTimeIcon = () => {
   return (
@@ -13,5 +13,5 @@ export const PrepTimeIcon = () => {
       <path d="M0 0h24v24H0z" fill="none" />
       <path d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67z" />
     </svg>
-  )
-}
+  );
+};

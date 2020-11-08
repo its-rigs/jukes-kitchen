@@ -1,7 +1,7 @@
-import React from 'react'
+import React from 'react';
 
-import { QuantityIcon, PrepTimeIcon, CookTimeIcon } from '../../atoms'
-import styles from './recipe-info.module.scss'
+import { QuantityIcon, PrepTimeIcon, CookTimeIcon } from '../../atoms';
+import styles from './recipe-info.module.scss';
 
 export const RecipeInfo = ({ servings, prepTime, cookTime }) => {
   return (
@@ -19,5 +19,5 @@ export const RecipeInfo = ({ servings, prepTime, cookTime }) => {
         <span>{cookTime}</span>
       </li>
     </ul>
-  )
-}
+  );
+};

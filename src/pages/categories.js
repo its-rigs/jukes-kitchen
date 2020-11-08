@@ -1,15 +1,15 @@
-import React from 'react'
-import { graphql } from 'gatsby'
-import { Container } from '../components/atoms'
-import { Layout } from '../components/organisms'
-import { Link } from 'gatsby'
+import React from 'react';
+import { graphql } from 'gatsby';
+import { Container } from '../components/atoms';
+import { Layout } from '../components/organisms';
+import { Link } from 'gatsby';
 
 function capitaliseFirstLetter(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
 const Categories = ({ data }) => {
-  const { edges: recipes } = data.allMdx
+  const { edges: recipes } = data.allMdx;
   const categoriesSet = new Set();
   const recipeMap = new Map();
 
@@ -19,15 +19,15 @@ const Categories = ({ data }) => {
     const recipe = { id, slug, title };
 
     categories.forEach(category => {
-      const capitalisedCategory = capitaliseFirstLetter(category)
+      const capitalisedCategory = capitaliseFirstLetter(category);
       categoriesSet.add(capitalisedCategory);
 
       let recipesForCategory = recipeMap.get(capitalisedCategory);
 
       if (recipesForCategory) {
-        recipesForCategory.push(recipe)
+        recipesForCategory.push(recipe);
       } else {
-        recipesForCategory = [recipe]
+        recipesForCategory = [recipe];
       }
 
       recipeMap.set(capitalisedCategory, recipesForCategory);
@@ -39,7 +39,7 @@ const Categories = ({ data }) => {
   return (
     <Layout>
       <Container>
-        {orderedCategories.map((category) => (
+        {orderedCategories.map(category => (
           <section>
             <h2>{category}</h2>
             <ul>
@@ -53,8 +53,8 @@ const Categories = ({ data }) => {
         ))}
       </Container>
     </Layout>
-  )
-}
+  );
+};
 
 export const pageQuery = graphql`
   query categoriesQuery {
@@ -71,6 +71,6 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;
 
-export default Categories
+export default Categories;

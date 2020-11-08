@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 export const CookTimeIcon = () => {
   return (
@@ -81,5 +81,5 @@ export const CookTimeIcon = () => {
         />
       </g>
     </svg>
-  )
-}
+  );
+};

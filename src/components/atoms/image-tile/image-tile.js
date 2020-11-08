@@ -1,6 +1,6 @@
-import React from 'react'
+import React from 'react';
 
-import styles from './image-tile.module.scss'
+import styles from './image-tile.module.scss';
 
 export const ImageTile = props => {
   return (
@@ -10,5 +10,5 @@ export const ImageTile = props => {
       title={props.title}
       alt={props.alt}
     />
-  )
-}
+  );
+};

@@ -1,15 +1,15 @@
-import React from 'react'
-import { graphql } from 'gatsby'
-import { Container } from '../components/atoms'
-import { Layout } from '../components/organisms'
-import { Link } from 'gatsby'
+import React from 'react';
+import { graphql } from 'gatsby';
+import { Container } from '../components/atoms';
+import { Layout } from '../components/organisms';
+import { Link } from 'gatsby';
 
 function capitaliseFirstLetter(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
 const Tags = ({ data }) => {
-  const { edges: recipes } = data.allMdx
+  const { edges: recipes } = data.allMdx;
   const tagsSet = new Set();
   const recipeMap = new Map();
 
@@ -19,15 +19,15 @@ const Tags = ({ data }) => {
     const recipe = { id, slug, title };
 
     tags.forEach(tag => {
-      const capitalisedTag = capitaliseFirstLetter(tag)
+      const capitalisedTag = capitaliseFirstLetter(tag);
       tagsSet.add(capitalisedTag);
 
       let recipesForTag = recipeMap.get(capitalisedTag);
 
       if (recipesForTag) {
-        recipesForTag.push(recipe)
+        recipesForTag.push(recipe);
       } else {
-        recipesForTag = [recipe]
+        recipesForTag = [recipe];
       }
 
       recipeMap.set(capitalisedTag, recipesForTag);
@@ -39,7 +39,7 @@ const Tags = ({ data }) => {
   return (
     <Layout>
       <Container>
-        {orderedTags.map((tag) => (
+        {orderedTags.map(tag => (
           <section>
             <h2>{tag}</h2>
             <ul>
@@ -53,8 +53,8 @@ const Tags = ({ data }) => {
         ))}
       </Container>
     </Layout>
-  )
-}
+  );
+};
 
 export const pageQuery = graphql`
   query tagsQuery {
@@ -71,6 +71,6 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;
 
-export default Tags
+export default Tags;

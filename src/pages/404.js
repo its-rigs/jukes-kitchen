@@ -1,6 +1,6 @@
-import React from 'react'
-import { Container } from '../components/atoms'
-import { Layout } from '../components/organisms'
+import React from 'react';
+import { Container } from '../components/atoms';
+import { Layout } from '../components/organisms';
 
 export default () => {
   return (
@@ -13,5 +13,5 @@ export default () => {
         </p>
       </Container>
     </Layout>
-  )
-}
+  );
+};

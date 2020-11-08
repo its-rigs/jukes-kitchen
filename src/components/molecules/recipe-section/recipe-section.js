@@ -1,6 +1,6 @@
-import React from 'react'
+import React from 'react';
 
-import { Container, Row } from '../../atoms'
+import { Container, Row } from '../../atoms';
 
 export const RecipeSection = ({ sectionId, children }) => {
   return (
@@ -9,5 +9,5 @@ export const RecipeSection = ({ sectionId, children }) => {
         <Row>{children}</Row>
       </Container>
     </section>
-  )
-}
+  );
+};

@@ -1,6 +1,6 @@
-import React from 'react'
+import React from 'react';
 
-import styles from './image.module.scss'
+import styles from './image.module.scss';
 
 export const Image = props => {
   return (
@@ -10,5 +10,5 @@ export const Image = props => {
       title={props.title}
       alt={props.alt}
     />
-  )
-}
+  );
+};

@@ -1,7 +1,7 @@
-import React from 'react'
+import React from 'react';
 
-import { OneThirdColumn, TwoThirdsColumn, Image } from '../../atoms'
-import { RecipeSection, RecipeInfo } from '../../molecules'
+import { OneThirdColumn, TwoThirdsColumn, Image } from '../../atoms';
+import { RecipeSection, RecipeInfo } from '../../molecules';
 
 export const RecipeOverview = ({
   title,
@@ -25,5 +25,5 @@ export const RecipeOverview = ({
         />
       </TwoThirdsColumn>
     </RecipeSection>
-  )
-}
+  );
+};

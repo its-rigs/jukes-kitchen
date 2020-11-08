@@ -1,7 +1,7 @@
-const path = require('path')
+const path = require('path');
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
-  const { createPage } = actions
+  const { createPage } = actions;
 
   const result = await graphql(`
     query {
@@ -16,18 +16,18 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         }
       }
     }
-  `)
+  `);
 
   if (result.errors) {
-    reporter.panicOnBuild('🚨  ERROR: Loading "createPages" query')
+    reporter.panicOnBuild('🚨  ERROR: Loading "createPages" query');
   }
 
-  const posts = result.data.allMdx.edges
+  const posts = result.data.allMdx.edges;
   posts.forEach(({ node }, index) => {
     createPage({
       path: node.frontmatter.slug,
       component: path.resolve(`./src/components/templates/recipe.js`),
       context: { id: node.id },
-    })
-  })
-}
+    });
+  });
+};
