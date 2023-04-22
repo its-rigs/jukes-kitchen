@@ -1,6 +1,6 @@
 containers:
   node-env:
-    image: node:14.7.0
+    image: node:18.16.0
     volumes:
       - local: <{batect.project_directory}
         container: /code
@@ -31,6 +31,8 @@ tasks:
 
   develop:
     description: Run Gatsby in develop mode
+    prerequisites:
+      - install
     run:
       container: node-env
       command: npm run develop
