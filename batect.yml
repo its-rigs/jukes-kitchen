@@ -1,6 +1,6 @@
 containers:
   node-env:
-    image: node:18.16.0
+    image: node:20.9.0
     volumes:
       - local: <{batect.project_directory}
         container: /code
