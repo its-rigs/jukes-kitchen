@@ -1,7 +1,6 @@
 import React from "react";
 import { H1, H2 } from "./Typography";
 import { CookTime, PrepTime, Quantity } from "./icons";
-import { PageProps } from "gatsby";
 
 export const Recipe: React.FC = () => {
   return (

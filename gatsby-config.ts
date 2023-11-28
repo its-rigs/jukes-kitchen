@@ -17,6 +17,7 @@ const config: GatsbyConfig = {
         path: `${__dirname}/content/recipes/`,
       },
     },
+    "gatsby-plugin-mdx",
   ],
 }
 

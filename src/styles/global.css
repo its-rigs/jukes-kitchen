@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.ingredients ul {
+  @apply list-disc list-inside
+}
+
+.ingredients ul li {
+  @apply leading-9
+}
+
+.method ol {
+  @apply list-decimal list-inside
+}
+
+.method ol li {
+  @apply mb-6 leading-7
+}
