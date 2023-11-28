@@ -2,7 +2,7 @@ name: Deploy Juke's Kitchen
 
 on:
   push:
-    branches: [master]
+    branches: [main]
 
 jobs:
   build:

@@ -1,8 +1,0 @@
-.batect
-batect
-batect.cmd
-batect.yml
-.cache
-package.json
-package-lock.json
-public
