@@ -2,8 +2,9 @@
 
 set -e
 
+git remote set-url origin https://git:${GH_TOKEN}@github.com/its-rigs/jukes-kitchen.git
+
 npx gh-pages \
   --silent \
-  --dist public \
-  --repo "https://$GH_TOKEN@github.com/its-rigs/jukes-kitchen" \
-  --user 1016498+its-rigs@users.noreply.github.com
+   -d public \
+   -u "1016498+its-rigs@users.noreply.github.com"
