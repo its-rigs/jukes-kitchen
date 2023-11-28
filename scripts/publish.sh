@@ -2,7 +2,6 @@
 
 set -e
 
-npx gh-pages-clean
 npx gh-pages \
   --silent \
   --dist public \
